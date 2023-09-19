@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+}
+
+.rect {
+    position: absolute;
+    z-index: -1;
+    height: 50rem;
+    width: 50rem;
+    border-radius: 4rem;
+    background-image: url("img/Polygon 2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.rect.first {
+    top: 10rem;
+    left: -3rem;
+
+
+}
+
+.rect.second {
+    top: 12rem;
+    left: 12vw;
+
+}
+
+.rect.third {
+    top: 14rem;
+    left: 30vw;
+
+}
+
+.rect.forth {
+    top: 16rem;
+    left: 48vw;
+
+}
+
+.rect.fifth {
+    top: 18rem;
+    left: 66vw;
+
+}
+
+body {
+    width: 100%;
+    color: white;
+}
+
+main {
+    padding-top: 10vh;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    height: 6rem;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.1rem solid whitesmoke;
+    background-color: black;
+    z-index: 1;
+}
+
+img {
+    filter: drop-shadow(0.2rem 0.2rem 0.2rem black);
+}
+
+.link-section {
+    width: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10rem;
+}
+
+a {
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+.brand-name {
+    font-size: 2rem;
+    margin-left: 3rem;
+}
+
+.logo {
+    position: absolute;
+    left: 45vw;
+    margin-top: 2rem;
+    background-image: url("img/pauk.png");
+    width: 19vh;
+    height: 19vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 4.375rem;
+}
+
+blockquote {
+    padding-top: 10vh;
+    font-size: 2rem;
+    width: 25rem;
+    filter: drop-shadow(0.2rem 0.2rem 0.2rem black);
+
+}
+
+cite {
+    font-style: italic;
+    font-size: 1rem;
+}
+
+footer {
+    padding-left: 10vw;
+    font-size: 1.5rem;
+    width: 30vw;
+}
+
+.mao-img {
+    margin-top: 15vh;
+
+}
+
+.mao-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.admission-section {
+    margin-top: 15vh;
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(0deg, black, #510e51);
+}
+
+p {
+    line-height: 2rem;
+    text-align: center;
+    word-spacing: 0.2rem;
+    letter-spacing: 0.1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    font-style: normal;
+}
+
+.subculture {
+    width: 50vw;
+    font-style: italic;
+    font-size: 1.5rem;
+}
+
+
+/* CSS */
+.button-33 {
+    background-color: #c2fbd7;
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, rgba(44, 187, 99, .15) 0 1px 2px, rgba(44, 187, 99, .15) 0 2px 4px, rgba(44, 187, 99, .15) 0 4px 8px, rgba(44, 187, 99, .15) 0 8px 16px, rgba(44, 187, 99, .15) 0 16px 32px;
+    color: green;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-33:hover {
+    box-shadow: rgba(44, 187, 99, .35) 0 -25px 18px -14px inset, rgba(44, 187, 99, .25) 0 1px 2px, rgba(44, 187, 99, .25) 0 2px 4px, rgba(44, 187, 99, .25) 0 4px 8px, rgba(44, 187, 99, .25) 0 8px 16px, rgba(44, 187, 99, .25) 0 16px 32px;
+}
+.shop-gallery {
+    display: grid;
+
+}

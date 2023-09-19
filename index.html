@@ -1,49 +1,56 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" style="width: 100vw; background-color: black;">
 <head>
     <meta name="redan паук редан чвк тц скинхеды оффники нефоры"
           content="оффициальная страница добровольнической группировки чвк редан" charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css" media="screen"/>
     <title>Redan</title>
 </head>
-<body>
+<body style="width: 100vw; overflow-x: hidden;">
 <header>
     <nav>
-        <button>Home</button>
+        <h2 class="brand-name">Ryodan</h2>
+        <div class="logo"></div>
+        <section class="link-section">
+            <a>Присоединится</a>
+            <a>Магазин</a>
+        </section>
+
     </nav>
-    <section></section>
 </header>
-<main>
-    <section>
-        <pre><code>
-  console.log('Привет редановец!');
-</code></pre>
+<main class="main">
+    <section style="width: 100vw;">
+        <div class="rect first"></div>
+        <div class="rect second"></div>
+        <div class="rect third"></div>
+        <div class="rect forth"></div>
+        <div class="rect fifth"></div>
+    </section>
+    <section class="mao-section">
         <blockquote cite="https://ru.wikiquote.org/wiki/%D0%9C%D0%B0%D0%BE_%D0%A6%D0%B7%D1%8D%D0%B4%D1%83%D0%BD">
             <p>Развитие человеческого общества в конечном счёте… приведет к уничтожению войны — этого чудовищного
                 взаимоистребления человечества.</p>
             <footer>—Мао Цзэдун.<cite> Стратегические вопросы революционной войны в Китае (декабрь 1936 г.)</cite>
             </footer>
         </blockquote>
-        <h1>Подавайте заявки в наши ряды</h1>
-        <p>
+        <div id="mao" class="mao-img">
+            <img src="img/mao.png">
+        </div>
+    </section>
+
+    <section class="admission-section">
+        <h2>Подавайте заявки в наши ряды</h2>
+        <p class="subculture">
             Депрессивно-агрессивная субкультура - это круто, подай заявку и захватывай торговые центры вместе с нами уже
             завтра!
-            <button><b>Подать заявку</b></button>
-
-        <h5>Тц под нашим контролем</h5>
-        <ul>
-            <li>Питерлэнд</li>
-            <li>Европолис</li>
-            <li>Галерея</li>
-            <li>Жемчужная плаза</li>
-        </ul>
         </p>
+        <button class="button-33">Подать заявку</button>
     </section>
-    <section>
 
-
+    <section class="shop-gallery">
         <h2>Галерея</h2>
         <div>Картинки</div>
-        <aside>Фильтры</aside>
         <div>картинки мерча
             <ol>
                 <li>футболка 100р<sup>2</sup></li>
@@ -85,6 +92,7 @@
 ═══════██═══════████████══════██════════
 ════════██═══════════════════██═════════
     </pre>
+    <script src="script.js"></script>
 </footer>
 </body>
 </html>
