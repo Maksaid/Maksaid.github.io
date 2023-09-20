@@ -1,0 +1,345 @@
+@import url(https://fonts.googleapis.com/css?family=Major+Mono+Display);
+
+* {
+    box-sizing: border-box;
+}
+
+.rect {
+    position: absolute;
+    z-index: -1;
+    height: 50rem;
+    width: 50rem;
+    border-radius: 4rem;
+    background-image: url("img/Polygon 2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.rect.first {
+    top: 10rem;
+    left: -3rem;
+
+
+}
+a{
+    cursor: pointer;
+}
+a:hover{
+    color: whitesmoke;
+    filter: drop-shadow(0 0 0.1rem white);
+}
+
+.rect.second {
+    top: 12rem;
+    left: 12vw;
+
+}
+
+.rect.third {
+    top: 14rem;
+    left: 30vw;
+
+}
+
+.rect.forth {
+    top: 16rem;
+    left: 48vw;
+
+}
+
+.rect.fifth {
+    top: 18rem;
+    left: 66vw;
+
+}
+
+body {
+    width: 100%;
+    color: white;
+    font-family: Roboto, sans-serif;
+}
+
+main {
+    padding-top: 10vh;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    height: 6rem;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.1rem solid whitesmoke;
+    background-color: black;
+    z-index: 1;
+}
+
+img {
+    filter: drop-shadow(0.2rem 0.2rem 0.2rem black);
+}
+
+.link-section {
+    width: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10rem;
+}
+
+a {
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+.brand-name {
+    font-size: 2rem;
+    margin-left: 3rem;
+    font-family: Major Mono Display, sent-serif;
+}
+
+.logo {
+    position: absolute;
+    left: 45vw;
+    margin-top: 2rem;
+    background-image: url("img/pauk.png");
+    width: 19vh;
+    height: 19vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 4.375rem;
+}
+
+.logo:hover{
+    animation: shake 0.8s;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-5px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(5px);
+    }
+}
+
+.footer-logo{
+    margin-top: 2rem;
+    background-image: url("img/pauk.png");
+    width: 19vh;
+    height: 19vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 4.375rem;
+}
+
+blockquote {
+    padding-top: 10vh;
+    font-size: 2rem;
+    width: 25rem;
+    filter: drop-shadow(0.2rem 0.2rem 0.2rem black);
+
+}
+
+cite {
+    font-style: italic;
+    font-size: 1rem;
+}
+
+footer {
+    padding-left: 10vw;
+    font-size: 1.5rem;
+    width: 30vw;
+}
+
+.mao-img {
+    margin-top: 15vh;
+
+}
+
+.mao-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.admission-section {
+    margin-top: 15vh;
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(0deg, black, #510e51);
+}
+
+p {
+    line-height: 2rem;
+    text-align: center;
+    word-spacing: 0.2rem;
+    letter-spacing: 0.1rem;
+}
+
+h2 {
+    font-size: 2rem;
+    font-style: normal;
+}
+
+.subculture {
+    width: 50vw;
+    font-style: italic;
+    font-size: 1.5rem;
+}
+
+
+/* CSS */
+.button-33 {
+    background-color: #c2fbd7;
+    border-radius: 100px;
+    box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset, rgba(44, 187, 99, .15) 0 1px 2px, rgba(44, 187, 99, .15) 0 2px 4px, rgba(44, 187, 99, .15) 0 4px 8px, rgba(44, 187, 99, .15) 0 8px 16px, rgba(44, 187, 99, .15) 0 16px 32px;
+    color: green;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-33:hover {
+    box-shadow: rgba(44, 187, 99, .35) 0 -25px 18px -14px inset, rgba(44, 187, 99, .25) 0 1px 2px, rgba(44, 187, 99, .25) 0 2px 4px, rgba(44, 187, 99, .25) 0 4px 8px, rgba(44, 187, 99, .25) 0 8px 16px, rgba(44, 187, 99, .25) 0 16px 32px;
+}
+.shop-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3vh;
+    height: fit-content;
+    padding-bottom: 3vh;
+    border-bottom: 1px solid whitesmoke ;
+}
+
+h2{
+    align-self: center;
+}
+
+.item-container {
+    list-style: none;
+    display: grid;
+    width: 80%;
+    padding: 1rem;
+    margin: 0;
+    grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+    grid-gap: 3rem;
+    border-radius: 2rem;
+    background-image: url("img/peakpx.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.shop-item {
+    border: 1px solid #510e51;
+    border-radius: 2rem;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(101,9,121,1) 35%, rgba(0,0,0,1) 100%);}
+
+.item-img{
+    width: inherit;
+}
+
+.by-button{
+
+    width: inherit;
+    border-radius: 1rem;
+    height: 7vh;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+
+    background: -webkit-linear-gradient(#030303, #ff002f);
+    background: -moz-linear-gradient(#030303, #ff00cc);
+    background: -o-linear-gradient(#030303, #ff00ee);
+    background: linear-gradient(#030303, #ff00af);
+
+    -webkit-transition: background 1s ease-out;
+    -moz-transition: background 1s ease-out;
+    -o-transition: background 1s ease-out;
+    transition: background 1s ease-out;
+    border: 0px;
+    background-size:1px 200px;
+    cursor:pointer;
+    filter: drop-shadow(0 0 0.1rem crimson);
+}
+.by-button:hover{
+    background-position:100px;
+}
+
+.new-price{
+    align-self: center;
+    font-size: 1.5rem;
+    line-height: 1rem;
+    margin-top: 0.5vh;
+    font-family: Bahnschrift, monospace;
+    letter-spacing: 0.2rem;
+    color: white;
+    filter: drop-shadow(0 0 0.05rem whitesmoke);
+}
+
+.old-price{
+    align-self: flex-start;
+    justify-self: end;
+    text-decoration: line-through;
+    margin-top: 1vh;
+    margin-left: 2vh;
+    margin-bottom: 0;
+}
+.price-container{
+    align-self: center;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.footer-grid{
+    margin-top: 2vh;
+    padding-left: 0;
+    display: grid;
+    height: 60vh;
+    width: 100vw;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30vw;
+
+}
+.align-center{
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p4{
+    margin: 0.5rem;
+    font-style: oblique;
+
+}
+p3{
+    margin-top: 1rem;
+    font-style: oblique;
+}
+
+
