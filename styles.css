@@ -223,7 +223,7 @@ h2 {
     touch-action: manipulation;
     width: 20vw;
     height: 7vh;
-    font-size: 1.5rem;
+    font-size: 1.5vw;
 }
 
 .button-33:hover {
@@ -399,6 +399,10 @@ h2{
     }
     .mao-img{
         margin-top: 1vh;
+    }
+    .button-33{
+        width: 10rem;
+        font-size: 1.1rem;
     }
 
     cite{
