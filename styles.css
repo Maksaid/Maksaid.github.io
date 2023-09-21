@@ -469,7 +469,7 @@ h2{
     }
     .link-section{
         justify-content: flex-end;
-        margin-right: 8vw;
+        margin-right: 3vw;
     }
     .brand-name{
         margin-left: 3vw;
@@ -496,6 +496,9 @@ h2{
         font-size: 1.2rem;
         width: 80vw;
 
+    }
+    .brand-name{
+        font-size: 1.5rem;
     }
 }
 
