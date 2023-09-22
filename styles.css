@@ -35,8 +35,8 @@ body{
 
 .rect.first {
     z-index: -2;
-    top: 10rem;
-    left: -3rem;
+    top: 10vh;
+    left: -3vw;
 
 }
 a{
@@ -49,28 +49,28 @@ a:hover{
 
 .rect.second {
     z-index: -3;
-    top: 12rem;
+    top: 12vh;
     left: 12vw;
 
 }
 
 .rect.third {
     z-index: -4;
-    top: 14rem;
+    top: 14vh;
     left: 30vw;
 
 }
 
 .rect.forth {
     z-index: -5;
-    top: 16rem;
+    top: 16vh;
     left: 48vw;
 
 }
 
 .rect.fifth {
     z-index: -6;
-    top: 18rem;
+    top: 18vh;
     left: 66vw;
 
 }
