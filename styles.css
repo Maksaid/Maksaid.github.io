@@ -1,45 +1,75 @@
+@import url(https://fonts.googleapis.com/css?family=Major+Mono+Display);
+@import url(https://fonts.googleapis.com/css?family=Comfortaa);
+
 * {
     box-sizing: border-box;
 }
 
+body{
+    overflow-x: hidden;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', sans-serif;
+}
 .rect {
     position: absolute;
     z-index: -1;
-    height: 50rem;
-    width: 50rem;
+    min-height: 50rem;
+    min-width: 50rem;
+    height: 60vh;
+    width: 60vw;
     border-radius: 4rem;
     background-image: url("img/Polygon 2.png");
     background-size: contain;
     background-repeat: no-repeat;
+    animation: moveObject 1s backwards;
+}
+@keyframes moveObject {
+    0% {
+        left: 0; /* Final position from the left (adjust as needed) */
+    }
 }
 
 
 .rect.first {
+    z-index: -2;
     top: 10rem;
     left: -3rem;
 
-
+}
+a{
+    cursor: pointer;
+}
+a:hover{
+    color: whitesmoke;
+    filter: drop-shadow(0 0 0.1rem white);
 }
 
 .rect.second {
+    z-index: -3;
     top: 12rem;
     left: 12vw;
 
 }
 
 .rect.third {
+    z-index: -4;
     top: 14rem;
     left: 30vw;
 
 }
 
 .rect.forth {
+    z-index: -5;
     top: 16rem;
     left: 48vw;
 
 }
 
 .rect.fifth {
+    z-index: -6;
     top: 18rem;
     left: 66vw;
 
@@ -77,23 +107,52 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-right: 10rem;
+    margin-right: 10vw;
 }
 
 a {
     font-size: 1.2rem;
     padding: 1rem;
+    text-decoration: none;
+    color: whitesmoke;
 }
 
 .brand-name {
     font-size: 2rem;
     margin-left: 3rem;
+    font-family: Major Mono Display, sent-serif;
 }
 
 .logo {
     position: absolute;
     left: 45vw;
-    margin-top: 2rem;
+    top: -0.8rem;
+    align-self: baseline;
+    background-image: url("img/pauk.png");
+    width: 19vh;
+    height: 19vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 4.375rem;
+}
+
+.logo:hover{
+    animation: shake 0.8s;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-5px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(5px);
+    }
+}
+
+.footer-logo{
     background-image: url("img/pauk.png");
     width: 19vh;
     height: 19vh;
@@ -141,7 +200,7 @@ footer {
     background: linear-gradient(0deg, black, #510e51);
 }
 
-p {
+.citate{
     line-height: 2rem;
     text-align: center;
     word-spacing: 0.2rem;
@@ -157,6 +216,7 @@ h2 {
     width: 50vw;
     font-style: italic;
     font-size: 1.5rem;
+    text-align: center;
 }
 
 
@@ -174,16 +234,284 @@ h2 {
     text-decoration: none;
     transition: all 250ms;
     border: 0;
-    font-size: 16px;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
+    width: 20vw;
+    height: 7vh;
+    font-size: 1.5vw;
 }
 
 .button-33:hover {
     box-shadow: rgba(44, 187, 99, .35) 0 -25px 18px -14px inset, rgba(44, 187, 99, .25) 0 1px 2px, rgba(44, 187, 99, .25) 0 2px 4px, rgba(44, 187, 99, .25) 0 4px 8px, rgba(44, 187, 99, .25) 0 8px 16px, rgba(44, 187, 99, .25) 0 16px 32px;
 }
 .shop-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3vh;
+    height: fit-content;
+    padding-bottom: 3vh;
+    border-bottom: 1px solid whitesmoke ;
+}
+
+h2{
+    align-self: center;
+}
+
+.item-container {
+    list-style: none;
     display: grid;
+    width: 80%;
+    padding: 1rem;
+    margin: 0;
+    grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+    grid-gap: 3rem;
+    border-radius: 2rem;
+    background-image: url("img/peakpx.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.shop-item {
+    border: 1px solid #510e51;
+    border-radius: 2rem;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(101,9,121,1) 35%, rgba(0,0,0,1) 100%);}
+
+.item-img{
+    width: inherit;
+}
+
+.by-button{
+
+    width: inherit;
+    border-radius: 1rem;
+    height: 7vh;
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+
+
+    background: linear-gradient(#030303, #ff00af);
+
+
+    transition: background 1s ease-out;
+    border: 0;
+    background-size:1px 200px;
+    cursor:pointer;
+    filter: drop-shadow(0 0 0.1rem crimson);
+}
+.by-button:hover{
+    background-position:100px;
+}
+
+.new-price{
+    align-self: center;
+    font-size: 1.5rem;
+    line-height: 1rem;
+    margin-top: 0.9rem;
+    font-family: Bahnschrift, monospace;
+    letter-spacing: 0.2rem;
+    color: white;
+    filter: drop-shadow(0 0 0.05rem whitesmoke);
+}
+
+.old-price{
+    align-self: flex-start;
+    justify-self: end;
+    text-decoration: line-through;
+    margin-top: 1vh;
+    margin-left: 2vh;
+    margin-bottom: 0;
+}
+.price-container{
+    align-self: center;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
 
 }
+
+.footer-grid{
+    margin-top: 2vh;
+    padding-left: 0;
+    display: grid;
+    height: 60vh;
+    width: 100vw;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30vw;
+
+}
+.align-center{
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 2vw;
+}
+
+.p4{
+    margin: 0.5rem;
+    font-style: oblique;
+    text-align: center;
+}
+.p3{
+    margin-top: 1rem;
+    font-style: oblique;
+}
+
+@media  (max-width: 1220px){
+    .shop-item:last-child{
+        display: none;
+    }
+
+    .shop-item .third{
+        display: none;
+    }
+
+    cite{
+        font-size: 0.9rem;
+    }
+    footer{
+        width: 20rem;
+    }
+
+    .citate{
+        font-size: 1.2rem;
+    }
+
+    .logo {
+        position: absolute;
+        left: 40vw;
+        background-image: url(img/pauk.png);
+        width: 19vh;
+        height: 19vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 4.375rem;
+    }
+    }
+@media (max-width: 912px){
+    .shop-item:nth-last-child(-n+2) {
+        display: none;
+    }
+    .subculture{
+        width: 30rem;
+    }
+    .mao-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-bottom: -10vh;
+    }
+    .mao-img{
+        margin-top: 1vh;
+    }
+    .button-33{
+        width: 10rem;
+        font-size: 1.1rem;
+    }
+
+    cite{
+        display: none;
+    }
+    footer{
+        margin-top: -2vh;
+        margin-left: 12rem;
+    }
+    .logo{
+        position: absolute;
+        left: 37vw;
+        background-image: url(img/pauk.png);
+        width: 19vh;
+        height: 19vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 4.375rem;
+    }
+    .footer-grid{
+        margin-top: 2vh;
+        margin-left: 0;
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 100vw;
+        grid-template-rows: repeat(2, auto);
+        grid-row-gap: 2vh
+    }
+    .align-center{
+        margin-left: 0;
+    }
+
+    a{
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    .brand-name{
+        font-size: 1.7rem;
+        margin-left: 5vw;
+        font-family: Major Mono Display, sent-serif;
+    }
+
+}
+@media (max-width: 600px){
+    .shop-item:nth-last-child(-n+3) {
+        display: none;
+    }
+    .shop-item{
+    }
+
+    .price-container{
+
+    }
+
+    a{
+        padding-right: 0;
+    }
+
+    .item-container{
+        width: auto;
+    }
+    .link-section{
+        justify-content: flex-end;
+        margin-right: 3vw;
+    }
+    .brand-name{
+        margin-left: 3vw;
+    }
+
+    .logo{
+        top: 0;
+        width: 15vh;
+        height: 15vh;
+    }
+    .citate{
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
+    footer{
+        font-size: 0.9rem;
+    }
+    h2{
+        font-size: 1.5rem;
+        text-align: center;
+
+    }
+    .subculture{
+        font-size: 1.2rem;
+        width: 80vw;
+
+    }
+    .brand-name{
+        font-size: 1.5rem;
+    }
+}
+
+
