@@ -1,14 +1,25 @@
 @import url(https://fonts.googleapis.com/css?family=Major+Mono+Display);
+@import url(https://fonts.googleapis.com/css?family=Comfortaa);
 
 * {
     box-sizing: border-box;
 }
 
+body{
+    overflow-x: hidden;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', sans-serif;
+}
 .rect {
     position: absolute;
     z-index: -1;
-    height: 50rem;
-    width: 50rem;
+    min-height: 50rem;
+    min-width: 50rem;
+    height: 60vh;
+    width: 60vw;
     border-radius: 4rem;
     background-image: url("img/Polygon 2.png");
     background-size: contain;
@@ -17,15 +28,15 @@
 }
 @keyframes moveObject {
     0% {
-        left: 200px; /* Final position from the left (adjust as needed) */
+        left: 0; /* Final position from the left (adjust as needed) */
     }
 }
 
 
 .rect.first {
+    z-index: -2;
     top: 10rem;
     left: -3rem;
-
 
 }
 a{
@@ -37,24 +48,28 @@ a:hover{
 }
 
 .rect.second {
+    z-index: -3;
     top: 12rem;
     left: 12vw;
 
 }
 
 .rect.third {
+    z-index: -4;
     top: 14rem;
     left: 30vw;
 
 }
 
 .rect.forth {
+    z-index: -5;
     top: 16rem;
     left: 48vw;
 
 }
 
 .rect.fifth {
+    z-index: -6;
     top: 18rem;
     left: 66vw;
 
@@ -63,7 +78,6 @@ a:hover{
 body {
     width: 100%;
     color: white;
-    font-family: Roboto, sans-serif;
 }
 
 main {
@@ -99,6 +113,8 @@ img {
 a {
     font-size: 1.2rem;
     padding: 1rem;
+    text-decoration: none;
+    color: whitesmoke;
 }
 
 .brand-name {
@@ -279,16 +295,12 @@ h2{
     text-align: center;
     font-size: 1rem;
 
-    background: -webkit-linear-gradient(#030303, #ff002f);
-    background: -moz-linear-gradient(#030303, #ff00cc);
-    background: -o-linear-gradient(#030303, #ff00ee);
+
     background: linear-gradient(#030303, #ff00af);
 
-    -webkit-transition: background 1s ease-out;
-    -moz-transition: background 1s ease-out;
-    -o-transition: background 1s ease-out;
+
     transition: background 1s ease-out;
-    border: 0px;
+    border: 0;
     background-size:1px 200px;
     cursor:pointer;
     filter: drop-shadow(0 0 0.1rem crimson);
@@ -382,7 +394,7 @@ h2{
         background-repeat: no-repeat;
         border-radius: 4.375rem;
     }
-    }
+}
 @media (max-width: 912px){
     .shop-item:nth-last-child(-n+2) {
         display: none;
