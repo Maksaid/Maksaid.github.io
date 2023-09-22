@@ -8,6 +8,7 @@
 body{
     overflow-x: hidden;
     width: 100%;
+    margin: 0;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -20,7 +21,7 @@ body{
     min-width: 50rem;*/
     height: 60vh;
     width: 60vw;
-    margin-top: 10rem;
+    margin-top: 10vh;
     border-radius: 4rem;
     background-image: url("img/Polygon 2.png");
     background-size: contain;
@@ -474,7 +475,7 @@ h2{
     .rect.second {
         z-index: -3;
         top: 12vh;
-        left: 15vw;
+        left: 10vw;
         width: 80vw;
     }
 
@@ -487,18 +488,10 @@ h2{
 
     .rect.forth {
         display: none;
-        z-index: -5;
-        top: 16vh;
-        left: 48vw;
-
     }
 
     .rect.fifth {
         display: none;
-        z-index: -6;
-        top: 18vh;
-        left: 66vw;
-
     }
 
     .shop-item:nth-last-child(-n+3) {
@@ -536,7 +529,11 @@ h2{
         line-height: 1.2rem;
     }
     footer{
+        width: 10rem;
         font-size: 0.9rem;
+    }
+    blockquote{
+        width: 90%;
     }
     h2{
         font-size: 1.5rem;
