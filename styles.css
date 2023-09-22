@@ -20,6 +20,7 @@ body{
     min-width: 50rem;*/
     height: 60vh;
     width: 60vw;
+    margin-top: 10rem;
     border-radius: 4rem;
     background-image: url("img/Polygon 2.png");
     background-size: contain;
@@ -479,8 +480,8 @@ h2{
 
     .rect.third {
         z-index: -4;
-        top: 20vh;
-        left: 30vw;
+        top: 14vh;
+        left: 20vw;
         width: 80vw;
     }
 
