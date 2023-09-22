@@ -16,8 +16,8 @@ body{
 .rect {
     position: absolute;
     z-index: -1;
-    min-height: 50rem;
-    min-width: 50rem;
+   /* min-height: 50rem;
+    min-width: 50rem;*/
     height: 60vh;
     width: 60vw;
     border-radius: 4rem;
