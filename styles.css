@@ -33,12 +33,7 @@ body{
 }
 
 
-.rect.first {
-    z-index: -2;
-    top: 10vh;
-    left: -3vw;
 
-}
 a{
     cursor: pointer;
 }
@@ -46,7 +41,12 @@ a:hover{
     color: whitesmoke;
     filter: drop-shadow(0 0 0.1rem white);
 }
+.rect.first {
+    z-index: -2;
+    top: 10vh;
+    left: -3vw;
 
+}
 .rect.second {
     z-index: -3;
     top: 12vh;
@@ -462,6 +462,44 @@ h2{
 
 }
 @media (max-width: 600px){
+
+    .rect.first {
+        z-index: -2;
+        top: 10vh;
+        left: 0;
+        width: 80vw;
+
+    }
+    .rect.second {
+        z-index: -3;
+        top: 12vh;
+        left: 15vw;
+        width: 80vw;
+    }
+
+    .rect.third {
+        z-index: -4;
+        top: 20vh;
+        left: 30vw;
+        width: 80vw;
+    }
+
+    .rect.forth {
+        display: none;
+        z-index: -5;
+        top: 16vh;
+        left: 48vw;
+
+    }
+
+    .rect.fifth {
+        display: none;
+        z-index: -6;
+        top: 18vh;
+        left: 66vw;
+
+    }
+
     .shop-item:nth-last-child(-n+3) {
         display: none;
     }
