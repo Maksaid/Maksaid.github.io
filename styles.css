@@ -7,6 +7,7 @@
 :root {
     --scrollTop: 0;
     --rotate: 0deg;
+    --sizeUnit: 1vw + 1vh;
 }
 body{
     overflow-x: hidden;
@@ -103,8 +104,10 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    display: flex;
-    height: 6rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-auto-rows: 8vh;
+    height:  8vh;
     width: 100vw;
     justify-content: space-between;
     align-items: center;
@@ -118,13 +121,10 @@ img {
 }
 
 .link-section {
-    width: 10rem;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     margin-right: 10vw;
-    flex-grow: 1;
-    max-width: 50vw;
 }
 
 a {
@@ -141,10 +141,8 @@ a {
 }
 
 .logo {
-    position: absolute;
-    left: 45vw;
-    top: -0.8rem;
-    align-self: baseline;
+    margin-top: calc(var(--sizeUnit)*3);
+    align-self: center;
     background-image: url("img/pauk.png");
     width: 10vw;
     height: 10vw;
@@ -354,6 +352,35 @@ h2{
     }
 }
 @media (max-width: 912px){
+
+    .rect.first {
+        z-index: -2;
+        top: 10vh;
+        left: 0;
+        width: 80vw;
+
+    }
+    .rect.second {
+        z-index: -3;
+        top: 12vh;
+        left: 10vw;
+        width: 80vw;
+    }
+
+    .rect.third {
+        z-index: -4;
+        top: 14vh;
+        left: 20vw;
+        width: 80vw;
+    }
+
+    .rect.forth {
+        display: none;
+    }
+
+    .rect.fifth {
+        display: none;
+    }
     .shop-item:nth-last-child(-n+2) {
         display: none;
     }
@@ -428,34 +455,6 @@ h2{
 
     .admission-section{
         margin-top: -20vh;
-    }
-    .rect.first {
-        z-index: -2;
-        top: 10vh;
-        left: 0;
-        width: 80vw;
-
-    }
-    .rect.second {
-        z-index: -3;
-        top: 12vh;
-        left: 10vw;
-        width: 80vw;
-    }
-
-    .rect.third {
-        z-index: -4;
-        top: 14vh;
-        left: 20vw;
-        width: 80vw;
-    }
-
-    .rect.forth {
-        display: none;
-    }
-
-    .rect.fifth {
-        display: none;
     }
 
     .shop-item:nth-last-child(-n+3) {
