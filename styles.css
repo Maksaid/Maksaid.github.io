@@ -649,9 +649,12 @@ tr{
     display: contents;
 }
 
-th{
+th {
     min-height: 13vw;
     min-width: 13vw;
+    background: mediumvioletred;
+    border: 1px solid white;
+}
 
 
   
