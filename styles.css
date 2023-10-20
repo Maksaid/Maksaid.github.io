@@ -565,9 +565,11 @@ img {
 }
 
 .track {
-    display: inline-flex;
+    display: flex;
     height: 100%;
     transition: transform 0.2s ease-in-out;
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 
 .card-container {
@@ -633,59 +635,12 @@ li {
 .card {
     width: 100%;
     height: 100%;
-    /*display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;*/
     background-position: center bottom;
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 10px;
 }
 
-
-.nav button {
-    position: absolute;
-    top: 60%;
-    transform: translatey(-50%);
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    outline: none;
-    border: 1px solid #000;
-    cursor: pointer;
-}
-
-.nav .prev {
-    display: none;
-}
-
-.nav .prev.show {
-    display: block;
-    left: 1vw;
-}
-
-.nav .next {
-    right: 2.4vw;
-}
-
-.nav .next.hide {
-    display: none;
-}
-
-.left-arrow {
-    background-image: url("img/left.png");
-    height: inherit;
-    width: inherit;
-    background-size: cover;
-}
-
-.right-arrow {
-    background-image: url("img/right.png");
-    height: inherit;
-    width: inherit;
-    background-size: cover;
-}
 
 .mini-spider {
     position: absolute;
@@ -735,6 +690,7 @@ li {
 
 ::-webkit-scrollbar {
     width: 0.3vw;
+    height: 0.3vh;
 }
 
 /* Track */
