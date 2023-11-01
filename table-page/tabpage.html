@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="tabpage.css">
+</head>
+<body>
+<div class="container">
+  <h2>Column and Row Count Form</h2>
+  <form id="countForm">
+    <label for="columns">Column Count:</label>
+    <input type="number" id="columns" name="columns" required min="1">
+
+    <label for="rows">Row Count:</label>
+    <input type="number" id="rows" name="rows" required min="1">
+
+    <label for="first-column">First column size:</label>
+    <input type="number" id="first-column" name="first-column" required>
+
+    <p class="alert"></p>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+<section id="result" class="result" style="display: none;">
+  <h3>Selected Column and Row Count:</h3>
+  <p>Columns: <span id="columnCount"></span></p>
+  <p>Rows: <span id="rowCount"></span></p>
+  <section class="table-section">
+    <div class="grid-container" id="gridContainer"></div>
+  </section>
+
+</section>
+
+<script src="tabpage.js"></script>
+</body>
+</html>
