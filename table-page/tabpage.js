@@ -1,4 +1,6 @@
+
 document.addEventListener("DOMContentLoaded", function () {
+    const saveButton = document.getElementById("save")
     const form = document.getElementById("countForm");
     const resultDiv = document.getElementById("result");
     const columnCountSpan = document.getElementById("columnCount");
@@ -18,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
          columnsInt = parseInt(columns, 10);
          rowsInt = parseInt(rows, 10);
-        firstColumnSizeInt = parseInt(firstColumnSize, 10)
+         firstColumnSizeInt = parseInt(firstColumnSize, 10)
 
         if (isNaN(columnsInt) || isNaN(rowsInt) || isNaN(firstColumnSizeInt)) {
             alertDiv.textContent = "Please enter valid numbers for columns and rows."
@@ -44,4 +46,11 @@ document.addEventListener("DOMContentLoaded", function () {
         gridContainer.style.gridTemplateColumns = `${firstColumnSize}fr repeat(${columns - 1}, 1fr)`;
         resultDiv.style.display = "grid";
     });
+    saveButton.addEventListener("click", function ()  {
+        localStorage.setItem('row', rowsInt + '')
+        localStorage.setItem('col', columnsInt + '')
+        localStorage.setItem('firstCol', firstColumnSizeInt + '')
+        console.log(localStorage.getItem('row'))
+    })
 });
+
