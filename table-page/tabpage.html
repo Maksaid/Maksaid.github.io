@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Title</title>
   <link rel="stylesheet" href="tabpage.css">
+  <script src="tabpage.js"></script>
 </head>
 <body>
 <div class="container">
@@ -27,12 +28,11 @@
   <h3>Selected Column and Row Count:</h3>
   <p>Columns: <span id="columnCount"></span></p>
   <p>Rows: <span id="rowCount"></span></p>
-  <section class="table-section">
-    <div class="grid-container" id="gridContainer"></div>
-  </section>
+  <table class="table-section">
+    <template class="grid-container" id="gridContainer"></template>
+  </table>
 <button id="save">Save</button>
 </section>
 
-<script src="tabpage.js"></script>
 </body>
 </html>

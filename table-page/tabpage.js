@@ -36,14 +36,28 @@ document.addEventListener("DOMContentLoaded", function () {
         gridContainer.innerHTML = "";
 
         // Create the grid items
-        for (let i = 0; i < columns * rows; i++) {
-            const gridItem = document.createElement("div");
+        gridContainer.style.gridTemplateColumns = `${firstColumnSize}fr repeat(${columns - 1}, 1fr)`;
+        const tr = document.createElement("tr");
+        tr.style.display = "contents"
+        for (let i = 0; i < columns; i++){
+            const gridItem = document.createElement("th");
             gridItem.classList.add("grid-item");
             gridItem.textContent = i + 1;
-            gridContainer.appendChild(gridItem);
+            tr.appendChild(gridItem);
         }
+        gridContainer.appendChild(tr);
+        const tr2 = document.createElement("tr");
+        tr2.style.display = "contents"
+
+        for (let i = 0; i < columns * rows - columns    ; i++) {
+            const gridItem = document.createElement("td");
+            gridItem.classList.add("grid-item");
+            gridItem.textContent = i + 1;
+            tr2.appendChild(gridItem);
+        }
+        gridContainer.appendChild(tr2);
+
         console.log(firstColumnSize, columns)
-        gridContainer.style.gridTemplateColumns = `${firstColumnSize}fr repeat(${columns - 1}, 1fr)`;
         resultDiv.style.display = "grid";
     });
     saveButton.addEventListener("click", function ()  {

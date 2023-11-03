@@ -1,6 +1,6 @@
 const itemImgs = document.querySelectorAll(".item-img");
-let time = window.performance.timing
-
+let time = window.performance.timing;
+    // разобраться с таймингом
 document.addEventListener("DOMContentLoaded", function () {
     // Array of image paths. Update these with the correct paths to your images.
     const imagePaths = [
@@ -27,18 +27,18 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-const startTime = performance.now();
+const startTime = new Date().getTime();
 
 // Add your script logic here
 
-// Capture the end time after your page is fully loaded
 window.addEventListener('load', function() {
-    const endTime = performance.now();
+    const endTime = new Date().getTime();
 
     // Calculate the time taken for the page to load
     const loadTime = endTime - startTime;
     let podval = document.querySelector('.podval')
-    podval.textContent = 'Page loaded in: ' + loadTime
+    podval.textContent = 'Page loaded in: ' + loadTime;
+    console.log(loadTime, endTime)
     // Print the load time to the console
 });
 
