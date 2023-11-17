@@ -15,3 +15,10 @@ window.addEventListener('load', function() {
     // Print the load time to the console
     console.log(loadTime)
 });
+
+const logInButton = document.getElementById("log-in");
+logInButton.addEventListener('click', function (){
+    fetch('https://jsonplaceholder.typicode.com/users/1')
+        .then(response => response.json())
+        .then(json => console.log(json))
+})
