@@ -718,5 +718,29 @@ tr:nth-child(even) td {
     color: papayawhip;
 }
 
+#data-container{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 500;
+    background-color: gray;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-width: 10rem;
+    min-height: 10rem;
+}
+
+/* Styles for the preloader */
+#preloader {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 501;
+    color: #010101;
+}
+
 
 
