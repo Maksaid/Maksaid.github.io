@@ -30,7 +30,7 @@ logInButton.addEventListener('click', function (){
             })
             .catch(error => {
                 console.error('Error fetching data:', error);
-                document.getElementById('preloader').style.display = 'none';
+                document.getElementById('preloader').textContent = "Oshibka";
             });
     },2000)
 
@@ -42,7 +42,7 @@ function updateContainer(data) {
 
     // Add content to the container
     container.innerHTML = `
-    <button id="close-button" style="width: fit-content;align-self: end; color: red; z-index: 5002; display: block" onclick="closeContainer()">X</button>
+    <button id="close-button" style="width: fit-content;align-self: end; color: red; z-index: 5002; display: block" ; onclick="closeContainer()">X</button>
     <h2>${data.name}</h2>
     <p>Email: ${data.email}</p>
     <p>Id: ${data.id}</p>
