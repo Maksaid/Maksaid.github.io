@@ -10,18 +10,28 @@ window.addEventListener('DOMContentLoaded', async function () {
 
 
     async function getImages(images_count) {
-        let random = Math.random() * 10
-        preloader.style.display = 'block'
-        await fetch(`https://api.pexels.com/v1/search?query=universe&per_page=${images_count}&size=medium2&orientation=landscape&page=${random}`, {
-            method: 'GET',
-            headers: {
-                'Authorization': '1S9ufDXzal35Ul5QjpKZUeNYUJiFxzahbUPSvYDAJr9EyQJ3Y0FQlvxc'
+        let random = Math.random() * 10;
+        preloader.style.display = 'block';
+
+        try {
+            const response = await fetch(`https://api.pexels.com/v1/search?query=universe&per_page=${images_count}&size=medium2&orientation=landscape&page=${random}`, {
+                method: 'GET',
+                headers: {
+                    'Authorization': '1S9ufDXzal35Ul5QjpKZUeNYUJiFxzahbUPSvYDAJr9EyQJ3Y0FQlvxc'
+                }
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
             }
-        })
-            .then(response => response.json())
-            .then(response => addImagesToContainer(response, images_count))
-            .catch(err => showErrorMessage(err))
-        addParallax()
+
+            const responseData = await response.json();
+            addImagesToContainer(responseData, images_count);
+        } catch (err) {
+            showErrorMessage(err);
+        }
+
+        addParallax();
 
     }
 
