@@ -35,16 +35,7 @@ main {
     justify-content: space-evenly;
     gap: 10vw;
     border-radius: 2px;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-}
-
-.image-pair:hover {
-    transition: .5s ease-in-out;
-    height: calc(18 * var(--sizeUnitGallery));
-    z-index: 2;
-    border: 1px solid ghostwhite;
+    object-fit: cover;
 
 }
 
