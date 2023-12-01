@@ -29,44 +29,80 @@ main {
 
 .image-pair {
     width: 100%;
-    height: calc(11 * var(--sizeUnitGallery));
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 30vw;
-}
-
-.gallery_image {
-    border-radius: 2px;
     height: calc(12 * var(--sizeUnitGallery));
-    width: calc(10 * var(--sizeUnitGallery));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10vw;
+    border-radius: 2px;
     background-size: cover;
     background-repeat: no-repeat;
-}
-
-.gallery_image.i1 {
-    margin-bottom: calc(0.5 * var(--sizeUnitGallery));
-    transform: translate3d(0, calc(var(--scrollTop) / 7), 0);
 
 }
 
-.gallery_image.i2 {
-    margin-top: calc(0.5 * var(--sizeUnitGallery));
-    transform: translate3d(0, calc(var(--scrollTop) / 8), 0);
-
-
-}
-
-.gallery_image:hover {
+.image-pair:hover {
     transition: .5s ease-in-out;
     height: calc(18 * var(--sizeUnitGallery));
-    width: calc(15 * var(--sizeUnitGallery));
     z-index: 2;
+    border: 1px solid ghostwhite;
+
 }
+
 
 @media (max-width: 500px) {
     .image-pair {
         flex-direction: column;
         align-items: center;
+    }
+}
+
+/* CSS */
+.more-img-button {
+    margin: 1rem;
+    align-items: center;
+    background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.more-img-button:active,
+.more-img-button:hover {
+    outline: 0;
+}
+
+.more-img-button span {
+    background-color: rgb(5, 6, 45);
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+}
+
+.more-img-button:hover span {
+    background: none;
+}
+
+@media (min-width: 768px) {
+    .more-img-button {
+        font-size: 24px;
+        min-width: 196px;
     }
 }

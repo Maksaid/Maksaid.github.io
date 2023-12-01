@@ -1,9 +1,13 @@
 window.addEventListener('DOMContentLoaded', async function (){
     const imageContainer = document.querySelector('.image-container')
+    const preloader = document.querySelector('.preloader')
+    const moreImagesButton = document.querySelector('.more-img-button')
     console.log(await getImages(8))
-
+    startingImageOffset = document.querySelectorAll('.image-pair')[0].getBoundingClientRect().top
     async function getImages(images_count){
-        await fetch(`https://api.pexels.com/v1/search?query=space&per_page=${images_count}&size=medium2&orientation=portrait`,{
+       let random = Math.random * 10
+        preloader.style.display = 'block'
+        await fetch(`https://api.pexels.com/v1/search?query=space&per_page=${images_count}&size=medium2&orientation=landscape&page=${random}`,{
             method: 'GET',
             headers: {
                 'Authorization': '1S9ufDXzal35Ul5QjpKZUeNYUJiFxzahbUPSvYDAJr9EyQJ3Y0FQlvxc'
@@ -15,16 +19,17 @@ window.addEventListener('DOMContentLoaded', async function (){
 
     }
 
-
+    moreImagesButton.addEventListener('click', async function (){
+        await getImages(4)
+    })
 
     function addImagesToContainer(response, images_count){
         console.log(response)
-        for (let i = 0; i < images_count ; i+=2) {
-            let url1 = response.photos[i].src.large2x
-            let url2 = response.photos[i+1].src.large2x
-            let firstImg = `<div class="gallery_image i1" style="background-image: url(${url1})"></div>`
-            let secondImg = `<div class="gallery_image i2" style="background-image: url(${url2})"></div>`
-            let imagePair = `<div class="image-pair" >${firstImg}${secondImg}</div>`
+        preloader.style.display = 'none'
+
+        for (let i = 0; i < images_count ; i++) {
+            let url1 = response.photos[i].src.landscape
+            let imagePair = `<div class="image-pair" style="background-image: url(${url1})"></div>`
             imageContainer.innerHTML += imagePair
         }
     }
@@ -33,11 +38,13 @@ window.addEventListener('DOMContentLoaded', async function (){
     }
 
 })
+let startingImageOffset = 0
+
 window.addEventListener('scroll', e => {
     document.body.style.cssText += `--scrollTop: ${this.scrollY}px`
-    let mainHeight = document.querySelector('html').offsetHeight
-    for(const image of document.getElementsByClassName('gallery_image')){
-        console.log(`50% ${this.scrollY/mainHeight * 100}%`)
-        image.style.backgroundPosition = `${this.scrollY/mainHeight * 100}% ${100 - this.scrollY/mainHeight * 120}%`
+    let height = window.innerHeight - startingImageOffset;
+    for(const image of document.getElementsByClassName('image-pair')){
+        let rect = image.getBoundingClientRect();
+        image.style.backgroundPosition = `50% ${100 - Math.max(0,(rect.top)/height) * 100}%`
     }
 })
