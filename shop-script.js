@@ -22,7 +22,8 @@ document.addEventListener("DOMContentLoaded", function () {
         // Check if there is an image path for the current item
         if (imagePaths[i]) {
             // Set the background image for the current item
-            itemImgs[i].style.backgroundImage += `url(${imagePaths[i]})`;
+            console.log(itemImgs[i])
+            itemImgs[i].style.backgroundImage = `url(${imagePaths[i]})`;
         }
     }
 });
